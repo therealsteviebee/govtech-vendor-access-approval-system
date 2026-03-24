@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="760" viewBox="0 0 1500 760">
+  <defs>
+    <style>
+      .title { font: 700 34px Arial, sans-serif; fill: #111; }
+      .label { font: 600 22px Arial, sans-serif; fill: #111; }
+      .sub { font: 400 17px Arial, sans-serif; fill: #333; }
+      .box { fill: #f7f9fc; stroke: #1f2937; stroke-width: 2.5; rx: 22; ry: 22; }
+      .arrow { stroke: #111827; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <polygon points="0 0, 10 4, 0 8" fill="#111827"/>
+    </marker>
+  </defs>
+
+  <text x="750" y="60" text-anchor="middle" class="title">Vendor Access Approval &amp; Audit System</text>
+
+  <rect x="70" y="280" width="230" height="120" class="box"/>
+  <text x="185" y="330" text-anchor="middle" class="label">Requester</text>
+  <text x="185" y="362" text-anchor="middle" class="sub">Submits access request</text>
+
+  <rect x="360" y="280" width="270" height="120" class="box"/>
+  <text x="495" y="330" text-anchor="middle" class="label">Access Request Form</text>
+  <text x="495" y="362" text-anchor="middle" class="sub">Captures vendor details</text>
+
+  <rect x="700" y="250" width="280" height="180" class="box"/>
+  <text x="840" y="312" text-anchor="middle" class="label">Azure Function</text>
+  <text x="840" y="344" text-anchor="middle" class="sub">Validates request</text>
+  <text x="840" y="372" text-anchor="middle" class="sub">Creates Jira ticket</text>
+  <text x="840" y="400" text-anchor="middle" class="sub">Writes audit log</text>
+
+  <rect x="1080" y="110" width="270" height="120" class="box"/>
+  <text x="1215" y="160" text-anchor="middle" class="label">Jira Service Management</text>
+  <text x="1215" y="192" text-anchor="middle" class="sub">Approval workflow</text>
+
+  <rect x="1080" y="300" width="270" height="120" class="box"/>
+  <text x="1215" y="350" text-anchor="middle" class="label">Azure Table Storage</text>
+  <text x="1215" y="382" text-anchor="middle" class="sub">Audit record storage</text>
+
+  <rect x="1080" y="490" width="270" height="120" class="box"/>
+  <text x="1215" y="540" text-anchor="middle" class="label">Slack</text>
+  <text x="1215" y="572" text-anchor="middle" class="sub">Approver / ops notification</text>
+
+  <path d="M300 340 L360 340" class="arrow"/>
+  <path d="M630 340 L700 340" class="arrow"/>
+  <path d="M980 285 C1020 240, 1035 205, 1080 170" class="arrow"/>
+  <path d="M980 340 L1080 340" class="arrow"/>
+  <path d="M980 395 C1020 440, 1035 500, 1080 540" class="arrow"/>
+
+  <text x="745" y="170" text-anchor="middle" class="sub">Approval, auditability, and notification flow for regulated access requests</text>
+</svg>

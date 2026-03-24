@@ -1,0 +1,12 @@
+{
+  "requesterName": "Stevenson Benoit",
+  "requesterEmail": "stevenson.benoit@example.gov",
+  "vendorName": "Acme Field Services",
+  "vendorEmail": "tech@acmefieldservices.com",
+  "targetSystem": "SharePoint Project Site",
+  "accessReason": "Temporary document collaboration for facilities upgrade project",
+  "startDate": "2026-03-25",
+  "endDate": "2026-04-25",
+  "approverName": "Operations Manager",
+  "approverEmail": "ops.manager@example.gov"
+}

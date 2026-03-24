@@ -1,0 +1,17 @@
+# Secrets / local config
+local.settings.json
+
+# Logs
+*.log
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+
+# Archives
+*.zip

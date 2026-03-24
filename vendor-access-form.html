@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vendor Access Request Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 0 16px;
+      line-height: 1.5;
+    }
+    label {
+      display: block;
+      margin-top: 14px;
+      font-weight: bold;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      box-sizing: border-box;
+    }
+    button {
+      cursor: pointer;
+      margin-top: 18px;
+    }
+    .note {
+      font-size: 0.95rem;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <h1>Vendor Access Request Form</h1>
+  <p class="note">
+    Demo form for the GovTech Vendor Access Approval & Audit System.
+    Update the <code>functionUrl</code> variable below before testing.
+  </p>
+
+  <form id="requestForm">
+    <label for="requesterName">Requester Name</label>
+    <input id="requesterName" name="requesterName" required />
+
+    <label for="requesterEmail">Requester Email</label>
+    <input id="requesterEmail" name="requesterEmail" type="email" required />
+
+    <label for="vendorName">Vendor Name</label>
+    <input id="vendorName" name="vendorName" required />
+
+    <label for="vendorEmail">Vendor Email</label>
+    <input id="vendorEmail" name="vendorEmail" type="email" required />
+
+    <label for="targetSystem">Target System</label>
+    <input id="targetSystem" name="targetSystem" required />
+
+    <label for="accessReason">Access Reason</label>
+    <textarea id="accessReason" name="accessReason" rows="4" required></textarea>
+
+    <label for="startDate">Start Date</label>
+    <input id="startDate" name="startDate" type="date" required />
+
+    <label for="endDate">End Date</label>
+    <input id="endDate" name="endDate" type="date" required />
+
+    <label for="approverName">Approver Name</label>
+    <input id="approverName" name="approverName" required />
+
+    <label for="approverEmail">Approver Email</label>
+    <input id="approverEmail" name="approverEmail" type="email" required />
+
+    <button type="submit">Submit Request</button>
+  </form>
+
+  <pre id="output"></pre>
+
+  <script>
+    const functionUrl = "https://YOUR-FUNCTION-APP.azurewebsites.net/api/vendor-access-request?code=YOUR_FUNCTION_KEY";
+
+    document.getElementById("requestForm").addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(event.target);
+      const payload = Object.fromEntries(formData.entries());
+      const output = document.getElementById("output");
+
+      output.textContent = "Submitting request...";
+
+      try {
+        const response = await fetch(functionUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await response.json();
+        output.textContent = JSON.stringify(data, null, 2);
+      } catch (error) {
+        output.textContent = "Error: " + error.message;
+      }
+    });
+  </script>
+</body>
+</html>
