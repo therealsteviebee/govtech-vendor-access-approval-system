@@ -10,7 +10,7 @@ Without structured workflows:
 
 This system simulates a controlled, auditable workflow for managing vendor access requests in regulated environments.
 
-# Vendor Access Approval & Audit System (GovTech Demo)
+# Vendor Access Governance & Approval & Audit System (GovTech Demo)
 
 This project simulates a real-world vendor or contractor access request workflow for regulated organizations and public-sector environments. A requester submits an access request, the system validates the payload, creates a Jira Service Management approval ticket, sends a Slack notification to the approver or operations channel, and writes an audit record to Azure Table Storage.
 
