@@ -1,6 +1,26 @@
+## Business Problem
+
+Organizations frequently grant external vendors temporary access to internal systems (e.g., SharePoint, project portals, document repositories).
+
+Without structured workflows:
+- access requests are inconsistent
+- approvals are not properly tracked
+- audit trails are incomplete
+- access may persist beyond intended timeframes
+
+This system simulates a controlled, auditable workflow for managing vendor access requests in regulated environments.
+
 # Vendor Access Approval & Audit System (GovTech Demo)
 
 This project simulates a real-world vendor or contractor access request workflow for regulated organizations and public-sector environments. A requester submits an access request, the system validates the payload, creates a Jira Service Management approval ticket, sends a Slack notification to the approver or operations channel, and writes an audit record to Azure Table Storage.
+
+## Key Features
+
+- Automated Jira ticket creation for approval workflows  
+- Slack-based notification for visibility and follow-up  
+- Azure Table Storage audit logging  
+- Structured request validation  
+- Extensible architecture for compliance and governance use cases
 
 ## Solution Overview
 
