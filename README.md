@@ -87,7 +87,12 @@ Set these values in your Azure Function App settings before testing:
 - `AZURE_STORAGE_CONNECTION_STRING`
 - `AUDIT_TABLE_NAME`
 
+## Future Enhancements
 
-## Interview Talking Point
+- Automatic access expiration enforcement  
+- Approval escalation workflows  
+- Integration with identity providers (Entra ID)  
+- Role-based access routing  
+- Reporting dashboards for compliance tracking
+  
 
-> I built a vendor access approval and audit system using Azure Functions, PowerShell, Jira Service Management, Slack, and Azure Table Storage. It simulates how regulated organizations manage external access requests with approvals, notifications, and audit logging.
