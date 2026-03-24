@@ -84,12 +84,6 @@ Set these values in your Azure Function App settings before testing:
 - `AZURE_STORAGE_CONNECTION_STRING`
 - `AUDIT_TABLE_NAME`
 
-## Notes
-
-- This repo uses placeholder values and is meant to be safe to publish
-- Do **not** commit real secrets to GitHub
-- The HTML form can be hosted anywhere or used as a local/static demo
-- The audit record is intentionally simple and portfolio-friendly
 
 ## Interview Talking Point
 
