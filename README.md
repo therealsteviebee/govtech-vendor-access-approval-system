@@ -1,3 +1,6 @@
+<img width="1478" height="736" alt="image" src="https://github.com/user-attachments/assets/62327585-3366-4d92-b219-4ef1cbcaf920" />
+
+
 ## Business Problem
 
 Organizations frequently grant external vendors temporary access to internal systems (e.g., SharePoint, project portals, document repositories).
